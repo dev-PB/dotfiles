@@ -1,0 +1,11 @@
+notARepository: 'skip'
+
+gui:
+  nerdFontsVersion: "3"
+  expandFocusedSidePanel: true
+  expandedSidePanelWeight: 2
+  switchTabsWithPanelJumpKeys: true
+  enlargedSideViewLocation: top
+
+os:
+  editPreset: 'nvim'
