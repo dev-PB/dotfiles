@@ -1,0 +1,18 @@
+[include]
+    # User & machine specific configs
+    path = ~/.gitconfig.local
+[core]
+    editor = nvim
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[merge]
+    conflictstyle = zdiff3
+[diff]
+    algorithm = histogram
+    tool = winmerge
+[difftool "winmerge"]
+    cmd = "'C:/Program Files/WinMerge/WinMergeU.exe'" -u -e -wl -wr "$LOCAL" "$REMOTE"
+[alias]
+    plog = log --format='%Cgreen%cn%Creset - %Cblue%aD (%ar)%Creset%n%s%n%b' --graph
