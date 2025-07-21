@@ -1,11 +1,32 @@
-notARepository: 'skip'
+notARepository: skip
 
 gui:
-  nerdFontsVersion: "3"
+  nerdFontsVersion: 3
   expandFocusedSidePanel: true
-  expandedSidePanelWeight: 2
+  expandedSidePanelWeight: 2.5
   switchTabsWithPanelJumpKeys: true
   enlargedSideViewLocation: top
+  commandLogSize: 4
+  commitHashLength: 4
+  statusPanelView: allBranchesLog
+  showNumstatInFilesView: true
+  shortTimeFormat: 15:04
+  commitAuthorLongLength: 14
+  border: 'single'
+  showCommandLog: false
+  useHunkModeInStagingView: true
+  # portraitMode: 'always'
+  mainPanelSplitMode: 'vertical'
+
+  theme:
+    selectedLineBgColor:
+      - "#223249"
+      - bold
 
 os:
-  editPreset: 'nvim'
+  editPreset: 'helix (hx)'
+
+git:
+  branchLogCmd: git log --graph --decorate --color=always --date=local --pretty="format:%Cgreen%an%Creset %Cblue%ah%Creset %Cred%d%Creset %n%s%n"
+  allBranchesLogCmds:
+    - git log --graph --decorate --all --color=always --date=local --pretty="format:%Cgreen%an%Creset %Cblue%ah%Creset %Cred%d%Creset %n%s%n"

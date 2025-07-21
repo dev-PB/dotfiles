@@ -2,7 +2,9 @@
     # User & machine specific configs
     path = ~/.gitconfig.local
 [core]
-    editor = nvim
+    editor = hx
+[commit]
+	verbose = true
 [pull]
 	rebase = true
 [fetch]
@@ -10,9 +12,20 @@
 [merge]
     conflictstyle = zdiff3
 [diff]
-    algorithm = histogram
+	algorithm = histogram
+	renames = true
+	mnemonicPrefix = true
+	colorMoved = zebra
     tool = winmerge
 [difftool "winmerge"]
-    cmd = "'C:/Program Files/WinMerge/WinMergeU.exe'" -u -e -wl -wr "$LOCAL" "$REMOTE"
+    cmd = "'C:/Program Files/WinMerge/WinMergeU.exe'" -e "$LOCAL" "$REMOTE"
+[column]
+	ui = auto
+[tag]
+	sort = version:refname
+[rerere]
+	enabled = false
 [alias]
-    plog = log --format='%Cgreen%cn%Creset - %Cblue%aD (%ar)%Creset%n%s%n%b' --graph
+	plog = log --format='%Cgreen%cn%Creset - %Cblue%aD (%ar)%Creset%n%s%n%b' --graph
+	leaderboard = shortlog --summary --numbered --all --no-merges
+	discard = reset HEAD --hard
